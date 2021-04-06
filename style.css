@@ -3,7 +3,7 @@
 }
 .card {
     margin: 10px;
-   
+   padding-top: 10px;
     display: inline-block;
     position: relative;
     
@@ -12,4 +12,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.d-block {
+    width: 80vw;
+    
+    margin-left: 10vw;
+
+}
+nav {
+    background-color: #ccc;
 }

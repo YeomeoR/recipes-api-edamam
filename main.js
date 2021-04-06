@@ -19,7 +19,8 @@ async function sendApiRequest() {
   );
   console.log(response);
   let data = await response.json();
-  console.log(data);
+    console.log(data);
+    // not the way to do it but quick fix. Will come back to iterate over it using .map()?
   useApiData(data);
   useApiData1(data);
   useApiData2(data);
