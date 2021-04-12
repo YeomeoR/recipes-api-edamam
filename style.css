@@ -1,24 +1,26 @@
 .input-group {
-    margin: 50px 0;
+  margin: 50px 0;
 }
 .card {
-    margin: 10px;
-   padding-top: 10px;
-    display: inline-block;
-    position: relative;
-    
+  margin: 10px;
+  padding-top: 10px;
+  display: inline-block;
+  position: relative;
 }
 .row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .d-block {
-    width: 80vw;
-    
-    margin-left: 10vw;
-
+  width: 80vw;
+  margin-left: 10vw;
 }
 nav {
-    background-color: #ccc;
+  background-color: rgba(117, 194, 101, 0.5);
+  height: 6vh;
+  margin-bottom: 1rem;
+}
+body {
+  background-color: rgba(235, 168, 168, 0.301);
 }

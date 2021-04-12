@@ -7,29 +7,34 @@ const input = document.querySelector('input');
 searchButton.addEventListener('click', (e) => {
   e.preventDefault();
   console.log('button clicked');
-    // call the function requesting the api search
+  // call the function requesting the api search
   sendApiRequest();
 });
 
 // an asynchronous function to fetch data from the api endpoint. info 'props' passed through from the event listener
 async function sendApiRequest() {
-    const response = await fetch(
-    // input.value is the value entered in the input field of the form
+  const response = await fetch(
+    // add your own config.js file and get your own app_id and app_key then set them to the variables in this fetch request endpoint
     `https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=${input.value}`,
+    // input.value is the value entered in the input field of the form. Super simple!
   );
   console.log(response);
   let data = await response.json();
-    console.log(data);
-    // not the way to do it but quick fix. Will come back to iterate over it using .map()?
-  useApiData(data);
-  useApiData1(data);
-  useApiData2(data);
-  useApiData3(data);
-  useApiData4(data);
-  useApiData5(data);
-  useApiData6(data);
-  useApiData7(data);
-  useApiData8(data);
+  console.log(data);
+  // not the way to do it but quick fix. Will come back to iterate over it using .map()?
+  if (input.value) {
+    useApiData(data);
+    useApiData1(data);
+    useApiData2(data);
+    useApiData3(data);
+    useApiData4(data);
+    useApiData5(data);
+    useApiData6(data);
+    useApiData7(data);
+    useApiData8(data);
+  } else {
+    alert('Please provide a valid search term');
+  }
 }
 
 // function that does something with the data received from the api. The name of the function should be customised to whatever you are doing with the data returned
@@ -141,4 +146,4 @@ function useApiData8(data) {
 </div>
 </div>`;
 }
-// should have just used .map() but will come back to it later.
+// should have just used .map()
